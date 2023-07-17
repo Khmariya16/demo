@@ -15,9 +15,14 @@
             flex-direction: column-reverse;*/
             /*flex-wrap: wrap;*/
            /*flex-flow: row-reverse wrap ;*/
+          
            justify-content: center;
            justify-content: space-between;
-           justify-content: space-around;
+           align-items: center;/*align items vertically*/
+          /* align-items: flex-start;
+           align-items: flex-end;
+           align-items: stretch wrap;*/
+
 
         }
         .item{
@@ -28,6 +33,17 @@
             margin: 10px;
             padding: 3px;
         }
+        #item1{
+           /* order: 3; change of seq*/
+           /* flex-grow: 2;*/
+           flex-shrink: 3;
+                }
+
+        #item2{
+            flex-shrink: 2;
+        }
+
+
 
     </style>
 </head>
@@ -35,11 +51,9 @@
     <h1>Lorem ipsum dolor sit amet consectetur.</h1>
     <div class="container">
         <div class="item" id="item1">First box</div>
-        <div class="item" id="item1">Second box</div>
-        <div class="item" id="item1">third box</div>
-        <div class="item" id="item1">fourth box</div>
-        <div class="item" id="item1">fifth box</div>
-        <div class="item" id="item1">sixth box</div>
+        <div class="item" id="item2">Second box</div>
+        <div class="item" id="item3">third box</div>
+        
     </div>
 </body>
 </html>
