@@ -1,0 +1,21 @@
+body{
+    background-color: rgb(193, 250, 231);
+    margin-left: 20px;
+    font-size: 22px;
+    padding-left: 16px;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+
+  .text {
+    font-size: 18px;
+    padding-left: 18px;
+    
+  }
+  .contact{
+    padding:18px
+  }
+  
