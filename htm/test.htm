@@ -4,62 +4,64 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
-  <style>
-    header{
-        background: linear-gradient(0deg,rgba(160, 145, 147, 0.205),rgba(173, 216, 233, 0.507)),url('https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=869&q=80');
-        background-size: cover;
-        padding: 150px;
-        color: rgba(0, 0, 0, 0.644);
-        background-position: center;
-        background-attachment: fixed;
-    }
-    .input{
-        background: transparent;
-        border: 2px solid rgba(0, 0, 0, 0.575);
-    }
-    body{
-        background: url('https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=869&q=80') no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-    }
-    .my-card{
-        width: 350px;
-        height: 450px;
-        transform-style: preserve-3d;
-        transform: perspective(1000px);
-    }
-    .card .card-body .card-footer{
-        transform: translateZ(50px);
-       }
-    
-  </style>
+
+</head>
+  
   <body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top my-nav">
+    <div class="container">
+      <a class="navbar-brand text-white" href="#">Venust</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item active">
+            <a class="nav-link text-white" href="#">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Brand</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">luxe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Advice</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--header-->
     <header>
         <div class="container">
-            <p class="display-4 text-center fw-bold title">Best Headphones ever</p>
-            <div class="input-group mt-5 search-input">
+            <p class="display-4 text-center fw-bold title">Unveiling the Beauty Within </p>
+            <h3 class="display-4 text-center  title">Welcome to Beauty Brad's Enchanting World</h3>
+            <div class="input-group mt-3 search-input">
             <input type="text" class="form-control form-control-lg input">
-            <button class="btn btn-outline-primary"> <i class="fa-solid fa-magnifying-glass"></i> Search</button>
+            <button class="btn btn-success"> <i class="fa-solid fa-magnifying-glass"></i> Search</button>
         </div>
         </div>
-
     </header>
 
+
+    <!--Main body-->
     <div class="container">
         <div class="row">
-
             <div class="col-md-4 mt-4">
                 <div class="card my-card">
-                    <img class="form-control form-control-lg"src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGVhZHNldHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="headset" >
+                    <img class="form-control form-control-lg" src="i1.jpg" alt="headset" width="50%" height="390px">
 
                     <div class="card-body">
-                        <p class="fw-bold">BoAt</p>
-                        <h4>hello world</h4>
+                        <p class="fw-bold">CHANEL</p>
+                        <h4>COCO Ncir</h4>
                         <p><i class="fa-solid fa-star text-warning"></i>(4000000) ratings</p>
-                        <h2 class="float-end fw-bold">₹5000</h2>
+                        <h2 class="float-end fw-bold">₹5900</h2>
                     </div>
                     <div class="card-footer">
                         <button class="btn btn-success"><i class="fa-solid fa-credit-card"></i> Buy Now</button>
@@ -72,13 +74,13 @@
 
             <div class="col-md-4 mt-4">
                 <div class="card my-card">
-                    <img class="form-control form-control-lg"src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGVhZHNldHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="headset" >
+                    <img class="form-control form-control-lg" src="i2.jpg" alt="headset" width="50%" height="391px">
 
                     <div class="card-body">
-                        <p class="fw-bold">BoAt</p>
-                        <h4>hello world</h4>
+                        <p class="fw-bold">RED DIAMOND</p>
+                        <h4>GRAPE fruit</h4>
                         <p><i class="fa-solid fa-star text-warning"></i>(4000000) ratings</p>
-                        <h2 class="float-end fw-bold">₹5000</h2>
+                        <h2 class="float-end fw-bold">₹9800</h2>
                     </div>
                     <div class="card-footer">
                         <button class="btn btn-success"><i class="fa-solid fa-credit-card"></i> Buy Now</button>
@@ -91,13 +93,13 @@
 
             <div class="col-md-4 mt-4">
                 <div class="card my-card">
-                    <img class="form-control form-control-lg"src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGVhZHNldHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="headset" >
+                    <img class="form-control form-control-lg" src="i3.jpg" alt="headset" height="387px">
 
                     <div class="card-body">
-                        <p class="fw-bold">BoAt</p>
-                        <h4>hello world</h4>
+                        <p class="fw-bold">JEAN PAUL GAULTIER</p>
+                        <h4>La Belle Eau De Parfum</h4>
                         <p><i class="fa-solid fa-star text-warning"></i>(4000000) ratings</p>
-                        <h2 class="float-end fw-bold">₹5000</h2>
+                        <h2 class="float-end fw-bold">₹4580</h2>
                     </div>
                     <div class="card-footer">
                         <button class="btn btn-success"><i class="fa-solid fa-credit-card"></i> Buy Now</button>
@@ -110,13 +112,13 @@
 
             <div class="col-md-4 mt-4">
                 <div class="card my-card">
-                    <img class="form-control form-control-lg"src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGVhZHNldHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="headset" >
+                    <img class="form-control form-control-lg" src="i4.jpg" alt="headset" height="439px" >
 
                     <div class="card-body">
-                        <p class="fw-bold">BoAt</p>
-                        <h4>hello world</h4>
+                        <p class="fw-bold">CHANCE CHANEL</p>
+                        <h4>Eau Tender</h4>
                         <p><i class="fa-solid fa-star text-warning"></i>(4000000) ratings</p>
-                        <h2 class="float-end fw-bold">₹5000</h2>
+                        <h2 class="float-end fw-bold">₹6780</h2>
                     </div>
                     <div class="card-footer">
                         <button class="btn btn-success"><i class="fa-solid fa-credit-card"></i> Buy Now</button>
@@ -129,13 +131,13 @@
 
             <div class="col-md-4 mt-4">
                 <div class="card my-card">
-                    <img class="form-control form-control-lg"src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGVhZHNldHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="headset" >
+                    <img class="form-control form-control-lg" src="i5.jpg" alt="headset" >
 
                     <div class="card-body">
-                        <p class="fw-bold">BoAt</p>
-                        <h4>hello world</h4>
+                        <p class="fw-bold">VERSACE</p>
+                        <h4>Eros</h4>
                         <p><i class="fa-solid fa-star text-warning"></i>(4000000) ratings</p>
-                        <h2 class="float-end fw-bold">₹5000</h2>
+                        <h2 class="float-end fw-bold">₹6100</h2>
                     </div>
                     <div class="card-footer">
                         <button class="btn btn-success"><i class="fa-solid fa-credit-card"></i> Buy Now</button>
@@ -148,13 +150,13 @@
 
             <div class="col-md-4 mt-4">
                 <div class="card my-card">
-                    <img class="form-control form-control-lg"src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGVhZHNldHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="headset" >
+                    <img class="form-control form-control-lg" src="i7.jpg" alt="headset" height="437px">
 
                     <div class="card-body">
-                        <p class="fw-bold">BoAt</p>
-                        <h4>hello world</h4>
+                        <p class="fw-bold">ACQUA DI GIO</p>
+                        <h4>Pour Homme</h4>
                         <p><i class="fa-solid fa-star text-warning"></i>(4000000) ratings</p>
-                        <h2 class="float-end fw-bold">₹5000</h2>
+                        <h2 class="float-end fw-bold">₹5250</h2>
                     </div>
                     <div class="card-footer">
                         <button class="btn btn-success"><i class="fa-solid fa-credit-card"></i> Buy Now</button>
@@ -169,8 +171,21 @@
 
         </div>
     </div>
-   
 
+    <!-- Footer -->
+    <div class="footer-basic mt-5 p-5">
+        <footer>
+            <div class="social"><a href="#"><i class="fa-brands fa-youtube"></i></a><a href="#"><i class="fa-brands fa-facebook"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-pinterest"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Venust © 2023</p>
+        </footer>
+    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>

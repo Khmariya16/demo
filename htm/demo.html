@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  
+
+  <!-- Demo styles -->
+  <style>
+     @import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:ital,wght@1,300&display=swap');
+  
+  @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300&family=Ysabeau+Office:ital,wght@1,300&display=swap');
+
+ 
+  @import url('https://fonts.googleapis.com/css2?family=Ceviche+One&family=Great+Vibes&family=Roboto:wght@300&family=Ysabeau+Office:ital,wght@1,300&display=swap');
+
+  
+  @import url('https://fonts.googleapis.com/css2?family=Ceviche+One&family=Great+Vibes&family=Raleway+Dots&family=Roboto:wght@300&family=Ysabeau+Office:ital,wght@1,300&display=swap');
+
+
+
+
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .swiper-container {
+    width: 100%;
+    height: 300px; /* Adjust the height as needed */
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Fit the entire image within the slide */
+  }
+  header{
+    background: url('header.jpg');
+    background-size: cover;
+    padding: 120px;
+    color: white;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Raleway Dots', cursive;
+}
+
+body{
+    background: url('i8.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.my-card{
+    width: 350px;
+    height: 450px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+.card .card-body .card-footer{
+    transform: translateZ(50px);
+   }
+   .my-nav{
+    background:transparent;
+    
+  }
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+
+        <!-- Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top my-nav">
+    <div class="container">
+      <a class="navbar-brand text-white" href="#">Venust</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item active">
+            <a class="nav-link text-white" href="#">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Brand</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">luxe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Advice</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--header-->
+    <header>
+        <div class="container">
+            <p class="display-4 text-center fw-bold title">Unveiling the Beauty Within </p>
+            <h3 class="display-4 text-center  title">Welcome to Beauty Brad's Enchanting World</h3>
+            <div class="input-group mt-3 search-input">
+            <input type="text" class="form-control form-control-lg input">
+            <button class="btn btn-success"> <i class="fa-solid fa-magnifying-glass"></i> Search</button>
+        </div>
+        </div>
+    </header>
+
+
+
+      </div>
+      <div class="swiper-slide"><img src="i3.jpg" alt="" srcset=""></div>
+      <div class="swiper-slide">Slide 3</div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      rewind: true,
+     
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    
+      },
+    });
+  </script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js" integrity="sha512-RX/OFugt/bkgwRQg4B22KYE79dQhwaPp2IZaA/YyU3GMo/qY7GrXkiG6Dvvwnds6/DefCfwPTgCXnaC6nAgVYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+VanillaTilt.init(document.querySelectorAll('.card'),{
+            max:10,
+            speed:400,
+            scale:1.1,
+            maxGlare:.5
+            
+        });
+</script>
+</body>
+
+</html>
