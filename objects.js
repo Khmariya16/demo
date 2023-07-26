@@ -67,6 +67,13 @@ const brands1 = smartphones.map((p) => {return phone.brand});
 console.log(new Set(brands1));
 
 
+const person = {
+    name :'mariya',
+    age:'26'
+};
+console.log(person);
+
+
 
 
 
