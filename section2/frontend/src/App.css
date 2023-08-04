@@ -1,0 +1,15 @@
+.myclass{
+  color:red;
+  background-color: yellow;
+}
+.nav-item .active{
+  font-weight: bold;
+  background-color:lightgray;
+  border-bottom: 2px solid black;
+  color: crimson !important;
+
+}
+.a{
+  color: blueviolet;
+  padding: 5px;
+}
