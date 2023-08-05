@@ -8,6 +8,8 @@ import { BrowserRouter, Link ,Route, Routes } from 'react-router-dom';
 import EventHandling from './components/EventHandling';
 import StateManagment from './components/StateManagment';
 import TodoList from './components/TodoList';
+import ChatApp from './components/ChatApp';
+import ProductList from './components/ProductList';
 
 
 
@@ -32,6 +34,8 @@ function App() {
         <Route  element={ <EventHandling /> } path='event'/>
         <Route  element={ <StateManagment /> } path='state'/>
         <Route  element={ <TodoList /> } path='todo'/>
+        <Route  element={ <ChatApp /> } path='app'/>
+        <Route  element={ <ProductList /> } path='list'/>
       </Routes>
       </BrowserRouter>
       
