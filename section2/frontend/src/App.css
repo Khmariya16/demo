@@ -13,3 +13,8 @@
   color: blueviolet;
   padding: 5px;
 }
+.list-back{
+  background-image: url("/public/m.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}

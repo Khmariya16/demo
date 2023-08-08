@@ -1,38 +1,58 @@
 import React, { useState } from 'react'
 
 const ChatApp = () => {
+  const [chat, setChat] = useState([])
 
-const [chats, setChats] = useState([]);
-
-const fn = (f) => {
-  if(f.value === 'Enter'){
-    console.log(f.target.value);
-    setChats([...chats , {text: f.target.value , completed : false}])
-    console.log(chats)
-  }
+  const task = (t) =>
+  {
+if(t.code === 'Enter'){
+  console.log(t.target.value)
+  setChat([...chat , {text:t.target.value , completed:false}]);
+console.log(chat)
 }
+  }
+
+  const deletechat =(index) =>{
+    console.log(index)
+    const temp = chat;
+    temp.splice(index,1)
+    setChat([...temp])
+  }
+
+const completechat =(index) => {
+  const temp = chat;
+  temp[index].completed = true;
+  setChat([...temp]);
+}
+
+
   return (
-    <div className='conatiner'>
-<p className='display-4 fw-bold text-center'>Chat App</p>
-<hr />
-      <div className="card mt-5">
-        <div className="card-header"></div>
-     <input className='form-control' onKeyDown={ fn } placeholder='add something' />
+    <div>
+      <div className="conatiner">
+        <p className="text-center display-4">Chat App</p>
+        <hr />
 
+        <div className="card">
+          
 
-        <div className="card-body">
-
-          <ul className="list-group">
-            {
-             chats.map((obj , index) => {
-              return <li className='list-group-item'>
-                <h3>{obj.text}</h3>
-                <button className='btn btn-info' ></button>
-              </li>
-             })
-            }
-            
-          </ul>
+          <div className="card-body">
+            <ul className="list-group">
+              {
+                chat.map((obj , index) => {
+                  return <li className="list-group-item">
+                    {obj.completed ? <span className='badge text-bg-warning'>completed</span> : <span className='badge text-bg-danger'>pending</span> }
+                    <h3 style={{textDecoration: obj.completed ? 'line-through' : null}}>{obj.text}</h3>
+                    <button onClick={ () => {deletechat(index)}} className='btn btn-info'>Delete</button>
+                    <button onClick={() => {completechat(index)}} className='btn btn-success ms-2'>completed</button>
+                    
+                  </li>
+                })
+              }
+            </ul>
+          </div>
+          <div className="card-footer">
+            <input className='form-control' placeholder='chat' onKeyDown={ task } />
+          </div>
         </div>
       </div>
     </div>
