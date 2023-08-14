@@ -10,6 +10,7 @@ import StateManagment from './components/StateManagment';
 import TodoList from './components/TodoList';
 import ChatApp from './components/ChatApp';
 import ProductList from './components/ProductList';
+import ProductList1 from './components/ProductList1';
 
 
 
@@ -36,6 +37,7 @@ function App() {
         <Route  element={ <TodoList /> } path='todo'/>
         <Route  element={ <ChatApp /> } path='app'/>
         <Route  element={ <ProductList /> } path='list'/>
+        <Route  element={ <ProductList1 /> } path='list1'/>
       </Routes>
       </BrowserRouter>
       
