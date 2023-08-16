@@ -15,6 +15,7 @@ const port = 5000;
 
 
 //middleware -- station -> middle ->
+app.use(express.json());
 app.use('/user' , userRouter);
 app.use('/block' , blockRouter);
 app.use('/blog' , blogRouter);

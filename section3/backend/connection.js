@@ -13,4 +13,4 @@ mongoose.connect(url)
     console.log(err);
 });
 
-module.export = mongoose;
+module.exports = mongoose;
