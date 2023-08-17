@@ -7,6 +7,7 @@ const express = require('express');
 const userRouter = require('./routers/userRouter') //relative path
 const blockRouter = require('./routers/blockRouter')
 const blogRouter = require('./routers/blogRouter')
+const cors = require('cors');
 
 
 //initilize express app
@@ -16,6 +17,9 @@ const port = 5000;
 
 //middleware -- station -> middle ->
 app.use(express.json());
+app.use(cors({
+    origin: ['http://localhost:3000']
+}))
 app.use('/user' , userRouter);
 app.use('/block' , blockRouter);
 app.use('/blog' , blogRouter);
