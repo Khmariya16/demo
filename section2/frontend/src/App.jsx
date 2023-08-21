@@ -11,12 +11,16 @@ import TodoList from './components/TodoList';
 import ChatApp from './components/ChatApp';
 import ProductList from './components/ProductList';
 import ProductList1 from './components/ProductList1';
+import ManageUser from './components/ManageUser';
+import { Toaster } from 'react-hot-toast';
+import UpdateUser from './components/UpdateUser';
 
 
 
 function App() {
   return (
     <div>
+      <Toaster position='top-right' />
       <BrowserRouter>
 
       {/* <Link to="/home">Home</Link> */}
@@ -38,6 +42,8 @@ function App() {
         <Route  element={ <ChatApp /> } path='app'/>
         <Route  element={ <ProductList /> } path='list'/>
         <Route  element={ <ProductList1 /> } path='list1'/>
+        <Route  element={ <ManageUser /> } path='user'/>
+        <Route  element={ <UpdateUser /> } path='updateuser'/>
       </Routes>
       </BrowserRouter>
       
