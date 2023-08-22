@@ -7,6 +7,7 @@ const express = require('express');
 const userRouter = require('./routers/userRouter') //relative path
 const blockRouter = require('./routers/blockRouter')
 const blogRouter = require('./routers/blogRouter')
+const utilRouter = require('./routers/util')
 const cors = require('cors');
 
 
@@ -23,6 +24,7 @@ app.use(cors({
 app.use('/user' , userRouter);
 app.use('/block' , blockRouter);
 app.use('/blog' , blogRouter);
+app.use('/util' , utilRouter);
 
 //routes --junction  -> route<-
 app.get('/', (req ,res) => {
