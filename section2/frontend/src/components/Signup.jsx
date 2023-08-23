@@ -2,6 +2,7 @@ import { useFormik } from 'formik';
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import {motion} from 'framer-motion';
 
 const Signup = () => {
 
@@ -17,6 +18,9 @@ const Signup = () => {
       age : ""
     },
     onSubmit : async ( values, { resetForm, setSubmitting } ) => {
+
+      values.avatar = selImg;
+
       console.log(values);
       setSubmitting(true);
 
@@ -72,7 +76,13 @@ const Signup = () => {
   }
 
   return (
-    <div>
+    <motion.div
+    className='bg'
+      initial={{opacity: 0, x: '100%' }}
+      animate={{opacity: 1, x: 0}}
+      exit={{opacity: 0, x: '-100%'}}
+      transition={{duration: 0.3, type: 'spring', stiffness: 50, damping: 10}}
+    >
       <div className="w-25">
         <div className="card">
           <div className="card-body">
@@ -103,7 +113,7 @@ const Signup = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

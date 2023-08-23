@@ -1,5 +1,6 @@
-import React, { useEffect, useState ,Link} from 'react'
+import React, { useEffect, useState } from 'react'
 import { toast } from 'react-hot-toast';
+import { Link } from 'react-router-dom';
 
 const ManageUser = () => {
 
@@ -15,14 +16,14 @@ const ManageUser = () => {
     };
 
     const deleteUser = async (id) => {
-      const res = await fetch ('http://loacalhost:5000/user/delete/' + id, { method : 'DELETE'})
-      console.log(res.status)
+      const res = await fetch('http://localhost:5000/user/delete/'+id, { method : 'DELETE' });
+      console.log(res.status);
+      const data = await res.json();
       if(res.status === 200){
         fetchUserData();
-        toast.success('user data successful!!')
+        toast.success(data.name +' Deleted Successfully ❗')
       }
     }
-    // fetchUserData();
 
     useEffect(() => {
       fetchUserData();
@@ -47,10 +48,10 @@ const ManageUser = () => {
                     <td>{user.email}</td>
                     <td>{user.age}</td>
                     <td>
-                      <Link to = {'/updateuser/'+user.id} className='btn btn-primary'>Edit</Link>
+                      <Link to={'/updateuser/'+user._id} className='btn btn-primary'>Edit</Link>
                     </td>
                     <td>
-                      <button onClick = {() => { deleteUser(user._id)}}className='btn btn-danger'>Delete</button>
+                      <button onClick={ () => { deleteUser(user._id) } } className='btn btn-danger'>Delete</button>
                     </td>
                   </tr> ) )
                 }

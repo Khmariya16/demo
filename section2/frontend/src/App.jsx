@@ -14,6 +14,7 @@ import ProductList1 from './components/ProductList1';
 import ManageUser from './components/ManageUser';
 import { Toaster } from 'react-hot-toast';
 import UpdateUser from './components/UpdateUser';
+import { AnimatePresence } from 'framer-motion';
 
 
 
@@ -22,6 +23,7 @@ function App() {
     <div>
       <Toaster position='top-right' />
       <BrowserRouter>
+      <AnimatePresence>
 
       {/* <Link to="/home">Home</Link> */}
       {/* <Link to="/signup">Signup</Link> */}
@@ -43,8 +45,9 @@ function App() {
         <Route  element={ <ProductList /> } path='list'/>
         <Route  element={ <ProductList1 /> } path='list1'/>
         <Route  element={ <ManageUser /> } path='user'/>
-        <Route  element={ <UpdateUser /> } path='updateuser'/>
+        <Route element={<UpdateUser />} path="updateuser/:id" />
       </Routes>
+      </AnimatePresence>
       </BrowserRouter>
       
      

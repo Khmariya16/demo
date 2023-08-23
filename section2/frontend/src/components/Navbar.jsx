@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
+
+  const [currentUser, setCurrentUser] = useState(
+    JSON.parse(sessionStorage.getItem('user'))
+    );
+
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
   <div className="container-fluid">
@@ -67,10 +73,20 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" to="/user">
+          <NavLink className="nav-link" to="/manageuser">
             Manage User
           </NavLink>
         </li>
+        {
+          currentUser !== null? (
+            <li className="nav-item">
+          <NavLink className="nav-link" to="/manageuser">
+            Log out
+          </NavLink>
+        </li>
+          ) : " "
+        }
+        
         
       </ul>
       

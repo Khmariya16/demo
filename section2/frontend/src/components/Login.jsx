@@ -2,6 +2,7 @@ import { useFormik } from "formik";
 import React from "react";
 import Swal from "sweetalert2";
 import * as Yup from 'yup';
+import {motion} from 'framer-motion';
 
 const LoginSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Email is Required'),
@@ -34,7 +35,11 @@ const Login = () => {
           icon : 'success',
           title : 'Nice!',
           text : 'Logged in Successfully 😎'
-        })
+        });
+//setitem,getitem,removeitem
+            const data = await res.json();
+            sessionStorage.setItem('user', JSON.stringify(data));//('key' , value)
+
       }else if(res.status === 401){
         Swal.fire({
           icon : 'error',
@@ -56,7 +61,13 @@ const Login = () => {
   });
 
   return (
-    <div>
+    <motion.div 
+    className="bg"
+      initial={{opacity: 0, x: '100%' }}
+      animate={{opacity: 1, x: 0}}
+      exit={{opacity: 0, x: '-100%'}}
+      transition={{duration: 0.3, type: 'spring', stiffness: 50, damping: 10}}
+    >
       <div className="w-25">
         <div className="card">
           <div className="card-body">
@@ -77,7 +88,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
