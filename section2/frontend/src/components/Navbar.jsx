@@ -77,6 +77,7 @@ const Navbar = () => {
             Manage User
           </NavLink>
         </li>
+        
         {
           currentUser !== null? (
             <li className="nav-item">
