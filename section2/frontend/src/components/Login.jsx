@@ -3,6 +3,7 @@ import React from "react";
 import Swal from "sweetalert2";
 import * as Yup from 'yup';
 import {motion} from 'framer-motion';
+import useUserContext from "../UserContext";
 
 const LoginSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Email is Required'),
@@ -11,13 +12,15 @@ const LoginSchema = Yup.object().shape({
 
 const Login = () => {
 
+  const {setLoggedIn} = useUserContext();
+
   // Initializing formik
   const loginForm = useFormik({
     initialValues: {
       email : "",
       password : ""
     },
-    onSubmit : async ( values ) => {
+    onSubmit : async ( values, {resetForm} ) => {
       console.log(values);
 
       const res = await fetch('http://localhost:5000/user/authenticate', {
@@ -36,9 +39,11 @@ const Login = () => {
           title : 'Nice!',
           text : 'Logged in Successfully 😎'
         });
-//setitem,getitem,removeitem
-            const data = await res.json();
-            sessionStorage.setItem('user', JSON.stringify(data));//('key' , value)
+
+        const data = await res.json();
+        sessionStorage.setItem('user', JSON.stringify(data) );
+        setLoggedIn(true);
+        resetForm();
 
       }else if(res.status === 401){
         Swal.fire({

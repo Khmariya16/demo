@@ -15,6 +15,8 @@ import ManageUser from './components/ManageUser';
 import { Toaster } from 'react-hot-toast';
 import UpdateUser from './components/UpdateUser';
 import { AnimatePresence } from 'framer-motion';
+import { UserProvider } from './UserContext';
+import Profile from './components/Profile';
 
 
 
@@ -23,6 +25,7 @@ function App() {
     <div>
       <Toaster position='top-right' />
       <BrowserRouter>
+      <UserProvider>
       <AnimatePresence>
 
       {/* <Link to="/home">Home</Link> */}
@@ -46,8 +49,10 @@ function App() {
         <Route  element={ <ProductList1 /> } path='list1'/>
         <Route  element={ <ManageUser /> } path='user'/>
         <Route element={<UpdateUser />} path="updateuser/:id" />
+        <Route element={<Profile />} path="profile" />
       </Routes>
       </AnimatePresence>
+      </UserProvider >
       </BrowserRouter>
       
      
