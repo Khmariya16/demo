@@ -8,7 +8,8 @@ const myschema = new Schema({
     title : String,
     description : String,
     image : String,
-    content : String
+    content : String,
+    avatar: String
 });
 
 module.exports = model( 'blog', myschema );

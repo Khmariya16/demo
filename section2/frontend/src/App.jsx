@@ -17,6 +17,7 @@ import UpdateUser from './components/UpdateUser';
 import { AnimatePresence } from 'framer-motion';
 import { UserProvider } from './UserContext';
 import Profile from './components/Profile';
+import UserAuth from './components/UserAuth';
 
 
 
@@ -49,7 +50,7 @@ function App() {
         <Route  element={ <ProductList1 /> } path='list1'/>
         <Route  element={ <ManageUser /> } path='user'/>
         <Route element={<UpdateUser />} path="updateuser/:id" />
-        <Route element={<Profile />} path="profile" />
+        <Route element={<UserAuth> <Profile /> </UserAuth>} path="profile" />
       </Routes>
       </AnimatePresence>
       </UserProvider >
